@@ -1,0 +1,53 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <title>Virtual Repeat</title>
+  <style type="text/css">
+    .virtualRepeatdemoInfiniteScroll #vertical-container {
+  height: 292px;
+  width: 100%;
+  max-width: 400px; }
+
+.virtualRepeatdemoInfiniteScroll .repeated-item {
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  height: 40px;
+  padding-top: 10px; }
+
+.virtualRepeatdemoInfiniteScroll md-content {
+  margin: 16px; }
+
+.virtualRepeatdemoInfiniteScroll md-virtual-repeat-container {
+  border: solid 1px grey; }
+
+.virtualRepeatdemoInfiniteScroll .md-virtual-repeat-container .md-virtual-repeat-offsetter div {
+  padding-left: 16px; }
+  </style>
+</head>
+<body ng-app="BlankApp" ng-cloak ng-controller="AppCtrl as ctrl">
+  {{ctrl.infiniteItems}}
+  <div class="virtualRepeatdemoInfiniteScroll">
+   <md-virtual-repeat-container id="vertical-container" >
+      <div md-virtual-repeat="item in ctrl.infiniteItems" md-on-demand
+          class="repeated-item" flex>
+        {{item}}
+      </div>
+    </md-virtual-repeat-container>
+</div>
+
+  
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  
+  
+</body>
+</html>
