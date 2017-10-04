@@ -1,0 +1,2 @@
+# Virtual-Repeat
+Display an infinitely growing list of items in a viewport of only 7 rows (height=40px).   This demo shows scroll and rendering performance gains when using md-virtual-repeat; achieved with the dynamic reuse of rows visible in the viewport area. Developers are required to explicitly use md-virtual-repeat-container as a wrapping parent container.   To enable infinite scroll behavior, developers must pass in a custom instance of mdVirtualRepeatModel (see the example's source for more info).
